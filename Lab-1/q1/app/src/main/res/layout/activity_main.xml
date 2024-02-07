@@ -8,74 +8,39 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="283dp"
-        android:layout_height="56dp"
+        android:layout_width="373dp"
+        android:layout_height="168dp"
         android:text="Welcome to Android Studio"
-        android:textSize="24sp"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.074" />
+        app:layout_constraintVertical_bias="0.393" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="145dp"
-        android:layout_height="100dp"
+        android:layout_width="114dp"
+        android:layout_height="105dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044"
+        app:layout_constraintVertical_bias="0.06"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
-    q<ScrollView
-        android:layout_width="419dp"
-        android:layout_height="517dp"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="220dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
-
-    <!--    <ScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:padding="16dp"-->
-<!--        tools:layout_editor_absoluteX="0dp"-->
-<!--        tools:layout_editor_absoluteY="63dp">-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="vertical">-->
-
-<!--            &lt;!&ndash; First Image &ndash;&gt;-->
-<!--            <ImageView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginBottom="16dp"-->
-<!--                android:adjustViewBounds="true"-->
-<!--                android:scaleType="centerCrop"-->
-<!--                android:src="@drawable/pic1" />-->
-
-<!--            &lt;!&ndash; Second Image &ndash;&gt;-->
-<!--            <ImageView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginBottom="16dp"-->
-<!--                android:adjustViewBounds="true"-->
-<!--                android:scaleType="centerCrop"-->
-<!--                android:src="@drawable/pic2" />-->
-
-<!--            &lt;!&ndash; Add more ImageView elements for additional images &ndash;&gt;-->
-
-<!--        </LinearLayout>-->
-<!--    </ScrollView>-->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="134dp"
+        android:layout_height="52dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
