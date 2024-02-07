@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import net.objecthunter.exp4j.Expression;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -144,6 +146,15 @@ public class MainActivity extends AppCompatActivity {
                 clearText();
             }
         });
+        findViewById(R.id.buttonequ).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String str = textView.getText().toString();
+                String result = EvaluateExpression(str);
+                textView.setText(result); // Display the result in the TextView
+            }
+        });
+
 
     }
 
@@ -155,5 +166,17 @@ public class MainActivity extends AppCompatActivity {
     private void clearText() {
         textView.setText("");
     }
+
+    private String EvaluateExpression(String str) {
+        try {
+            Expression expression = new ExpressionBuilder(str).build();
+            double result = expression.evaluate();
+            return String.valueOf(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Err";
+        }
+    }
+
 
 }
