@@ -155,5 +155,5 @@ public class MainActivity extends AppCompatActivity {
     private void clearText() {
         textView.setText("");
     }
-    
+
 }
