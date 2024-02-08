@@ -1,11 +1,12 @@
 package com.example.q2;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import net.objecthunter.exp4j.Expression;
+import androidx.appcompat.app.AppCompatActivity;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Scriptable;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -151,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String str = textView.getText().toString();
                 String result = EvaluateExpression(str);
-                textView.setText(result); // Display the result in the TextView
+                textView.setText(result);
             }
         });
 
@@ -167,11 +168,17 @@ public class MainActivity extends AppCompatActivity {
         textView.setText("");
     }
 
-    private String EvaluateExpression(String str) {
+    private String EvaluateExpression(String data) {
         try {
-            Expression expression = new ExpressionBuilder(str).build();
-            double result = expression.evaluate();
-            return String.valueOf(result);
+            Context context = Context.enter();
+            context.setOptimizationLevel(-1);
+            Scriptable scope = context.initStandardObjects();
+            Object result = context.evaluateString(scope, data, "<cmd>", 1, null);
+            String finalResult = Context.toString(result);
+            if (finalResult.endsWith(".0")) {
+                finalResult = finalResult.replace(".0", "");
+            }
+            return finalResult;
         } catch (Exception e) {
             e.printStackTrace();
             return "Err";
