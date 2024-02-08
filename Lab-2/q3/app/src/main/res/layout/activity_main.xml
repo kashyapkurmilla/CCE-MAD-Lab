@@ -1,92 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:layout_width="410dp"
-    android:layout_height="730dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".first">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="363dp"
-        android:orientation="horizontal">
+    <Button
+        android:id="@+id/buttonrelative"
+        android:layout_width="245dp"
+        android:layout_height="72dp"
+        android:text="Relative Layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#E4D1271F"
-            android:text="red"
-            android:textAlignment="center"
-            android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#4CAF50"
-            android:text="green"
-            android:textSize="20dp"
-            android:textAlignment="center"/>
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#2196F3"
-            android:text="blue"
-            android:textSize="20dp"
-            android:textAlignment="center"/>
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FFEB3B"
-            android:text="yellow"
-            android:textSize="20dp"
-            android:textAlignment="center"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="367dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="92dp"
-            android:background="#1B1A1A"
-            android:text="row one"
-            android:textColor="#EFE6E6" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="86dp"
-            android:background="#100F0F"
-            android:text="row two"
-            android:textColor="#EFE8E8" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="89dp"
-            android:background="#121111"
-            android:text="rwo three"
-            android:textColor="#F8EFEF" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="97dp"
-            android:background="#FAFAFA"
-            android:backgroundTint="#100F0F"
-            android:text="row four"
-            android:textColor="#713F3F" />
-    </LinearLayout>
-</RelativeLayout>
+    <Button
+        android:id="@+id/buttonlinear"
+        android:layout_width="245dp"
+        android:layout_height="72dp"
+        android:text="Linear Layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.389" />
+</androidx.constraintlayout.widget.ConstraintLayout>
