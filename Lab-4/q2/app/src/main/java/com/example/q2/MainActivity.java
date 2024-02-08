@@ -3,15 +3,16 @@ package com.example.q2;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+import android.widget.ToggleButton;
+import android.widget.CompoundButton;
 
 public class MainActivity extends AppCompatActivity {
 
     RadioButton radioButton1, radioButton2, radioButton3, radioButton4;
-    Button submitButton;
+    ToggleButton toggleButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +23,14 @@ public class MainActivity extends AppCompatActivity {
         radioButton2 = findViewById(R.id.radioButton2);
         radioButton3 = findViewById(R.id.radioButton3);
         radioButton4 = findViewById(R.id.radioButton4);
-        submitButton = findViewById(R.id.submitButton);
+        toggleButton = findViewById(R.id.toggleButton); // Initialize toggleButton here
 
-        submitButton.setOnClickListener(new View.OnClickListener() {
+        toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                checkAnswer();
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    checkAnswer();
+                }
             }
         });
     }
@@ -48,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Please select an answer", Toast.LENGTH_SHORT).show();
         }
     }
-
 
     private void showToastWithImage(int imageResource) {
         Toast toast = new Toast(getApplicationContext());
