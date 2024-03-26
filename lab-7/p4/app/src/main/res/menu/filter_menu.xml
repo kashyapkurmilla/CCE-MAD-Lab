@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- filter_menu.xml -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item
+        android:id="@+id/keywordsSubMenu"
+        android:title="Keywords">
+        <menu>
+            <item
+                android:id="@+id/keyword1"
+                android:title="Keyword 1"/>
+            <item
+                android:id="@+id/keyword2"
+                android:title="Keyword 2"/>
+            <!-- Add more keywords as needed -->
+        </menu>
+    </item>
+    <item
+        android:id="@+id/sortOption"
+        android:title="Sort"/>
 </menu>
