@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="8dp"
+        android:hint="Enter name"/>
+
+    <TextView
+        android:id="@+id/tv_student_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student ID:"
+        android:textSize="18sp"
+        android:layout_below="@id/et_name"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/et_student_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_student_id"
+        android:layout_marginTop="8dp"
+        android:hint="Enter student ID"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/tv_semester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Semester:"
+        android:textSize="18sp"
+        android:layout_below="@id/et_student_id"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/et_semester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_semester"
+        android:layout_marginTop="8dp"
+        android:hint="Enter semester"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/tv_branch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Branch:"
+        android:textSize="18sp"
+        android:layout_below="@id/et_semester"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/et_branch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_branch"
+        android:layout_marginTop="8dp"
+        android:hint="Enter branch"/>
+
+    <TextView
+        android:id="@+id/tv_faculty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Faculty Incharge:"
+        android:textSize="18sp"
+        android:layout_below="@id/et_branch"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/et_faculty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_faculty"
+        android:layout_marginTop="8dp"
+        android:hint="Enter faculty incharge"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@id/et_faculty"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
