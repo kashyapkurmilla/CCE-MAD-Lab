@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DBHelper extends SQLiteOpenHelper {
     // creating a constant variables for our database.
     // below variable is for our database name.
@@ -94,4 +97,23 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("UPDATE "+ TABLE_NAME + " SET name="+ "'"+name+"'" + " ,regno = " + "'"+regno+"'" + " ,marks= " + marks + " WHERE regno= " + regno);
 
     }
-}
+
+    public List<String> getallLabels(){
+        List<String> list = new ArrayList<String>();
+        String query = "SELECT * FROM " + TABLE_NAME;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query,null);
+
+        if(cursor.moveToFirst()){
+            do {
+                list.add(cursor.getString(2));
+            }while(cursor.moveToNext());
+
+            }
+        cursor.close();
+        db.close();
+        return list;
+        }
+
+    }
