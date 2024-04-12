@@ -15,15 +15,35 @@ import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 private Toolbar toolbar;
+private Button displaybtn, listviewbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        displaybtn = findViewById(R.id.spinnerbtn);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
+        listviewbtn = findViewById(R.id.listviewbtn);
         setSupportActionBar(toolbar);
 
+        displaybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), MainActivity5.class);
+                startActivity(i);
+            }
+        });
+
+        listviewbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =  new Intent(getApplicationContext(),MainActivity6.class);
+                startActivity(i);
+            }
+        });
     }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -58,4 +78,5 @@ private Toolbar toolbar;
         }
         return true;
     }
+
 }
